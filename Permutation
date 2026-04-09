@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>(); // To store all permutations
+        backtrack(result, new ArrayList<>(), nums, new boolean[nums.length]); // Start backtracking
+        return result; // Return the list of permutations
+    }
+
+    private void backtrack(List<List<Integer>> result, List<Integer> current, int[] nums, boolean[] used) {
+        // If the current permutation is of the same length as nums, add it to the result
+        if (current.size() == nums.length) {
+            result.add(new ArrayList<>(current)); // Add a copy of current to the result
+            return;
+        }
+
+        // Iterate through all numbers in nums
+        for (int i = 0; i < nums.length; i++) {
+            if (used[i]) continue; // Skip if the number is already used in the current permutation
+            current.add(nums[i]); // Include nums[i] in the current permutation
+            used[i] = true; // Mark this number as used
+            backtrack(result, current, nums, used); // Recurse to build the next permutation
+            current.remove(current.size() - 1); // Backtrack to explore other permutations
+            used[i] = false; // Unmark this number for the next iteration
+        }
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        
+        // Test cases
+        int[] nums1 = {1, 2, 3};
+        System.out.println(solution.permute(nums1)); // Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+
+        int[] nums2 = {0, 1};
+        System.out.println(solution.permute(nums2)); // Output: [[0, 1], [1, 0]]
+
+        int[] nums3 = {1};
+        System.out.println(solution.permute(nums3)); // Output: [[1]]
+    }
+}
