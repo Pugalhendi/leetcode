@@ -1,0 +1,25 @@
+import java.util.HashMap;
+
+class Solution {
+    public int findJudge(int n, int[][] trust) {
+        if (n == 1 && trust.length == 0) {
+            return 1; // If there's only one person and no trust relationships, that person is the judge.
+        }
+
+        int[] trustCounts = new int[n + 1]; // Array to count trust for each person
+
+        for (int[] t : trust) {
+            trustCounts[t[0]]--; // Person a trusts someone, so reduce their trust score
+            trustCounts[t[1]]++; // Person b is trusted by someone, so increase their trust score
+        }
+
+        for (int i = 1; i <= n; i++) {
+            if (trustCounts[i] == n - 1) { // If the trust score is n-1, the person is the town judge
+                return i;
+            }
+        }
+
+        return -1; // If no town judge is found
+    }
+
+}
