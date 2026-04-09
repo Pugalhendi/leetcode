@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Solution {
+    public boolean canPartition(int[] nums) {
+        int total = 0;
+        for (int x : nums) total += x;
+        // If total is odd, can't partition into two equal subsets
+        if ((total & 1) == 1) return false;
+
+        int target = total / 2;
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true; // empty subset sums to 0
+
+        for (int num : nums) {
+            // Update in reverse to avoid reusing the same number multiple times
+            for (int s = target; s >= num; s--) {
+                if (dp[s - num]) dp[s] = true;
+            }
+            // Optional early exit: if target achievable, we can return true early
+            if (dp[target]) return true;
+        }
+        return dp[target];
+    }
+
+    // For quick local testing
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[][] tests = {
+            {1,5,11,5},
+            {1,2,3,5},
+        };
+        for (int[] t : tests) {
+            System.out.println(sol.canPartition(t));
+        }
+    }
+}
