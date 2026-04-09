@@ -1,0 +1,29 @@
+public class Solution {
+    public int[] runningSum(int[] nums) {
+        int[] runningSum = new int[nums.length]; // Create an array to hold the running sums
+        
+        // Initialize the first element of runningSum
+        runningSum[0] = nums[0];
+
+        // Calculate the running sum
+        for (int i = 1; i < nums.length; i++) {
+            runningSum[i] = runningSum[i - 1] + nums[i]; // Add current number to the previous running sum
+        }
+
+        return runningSum; // Return the running sum array
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        
+        // Test cases
+        int[] result1 = solution.runningSum(new int[]{1, 2, 3, 4});
+        int[] result2 = solution.runningSum(new int[]{1, 1, 1, 1, 1});
+        int[] result3 = solution.runningSum(new int[]{3, 1, 2, 10, 1});
+        
+        // Print results
+        System.out.println(java.util.Arrays.toString(result1)); // Output: [1, 3, 6, 10]
+        System.out.println(java.util.Arrays.toString(result2)); // Output: [1, 2, 3, 4, 5]
+        System.out.println(java.util.Arrays.toString(result3)); // Output: [3, 4, 6, 16, 17]
+    }
+}
