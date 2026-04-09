@@ -1,0 +1,30 @@
+public class Solution {
+    public int climbStairs(int n) {
+        if (n == 1) return 1; // Base case: 1 way to climb 1 step
+        if (n == 2) return 2; // Base case: 2 ways to climb 2 steps
+
+        int first = 1; // Represents the number of ways to climb to the (n-1)th step
+        int second = 2; // Represents the number of ways to climb to the (n-2)th step
+        int ways = 0; // To store the number of ways to climb to the nth step
+
+        // Calculate the number of ways for each step from 3 to n
+        for (int i = 3; i <= n; i++) {
+            ways = first + second; // Current ways is the sum of the two previous ways
+            first = second; // Move to the next step
+            second = ways; // Update for the next iteration
+        }
+
+        return second; // Return the number of ways to climb to the nth step
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        
+        // Test cases
+        System.out.println(solution.climbStairs(2)); // Output: 2
+        System.out.println(solution.climbStairs(3)); // Output: 3
+        System.out.println(solution.climbStairs(4)); // Output: 5
+        System.out.println(solution.climbStairs(5)); // Output: 8
+        System.out.println(solution.climbStairs(10)); // Output: 89
+    }
+}
