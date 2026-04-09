@@ -1,0 +1,45 @@
+public class Solution {
+
+    // In-place stable-ish approach using two pointers
+    // Moves all even numbers to the front, preserving relative order of evens and odds is not required by this problem.
+    public static int[] sortArrayByParity(int[] nums) {
+        int left = 0; // position to place the next even number
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
+                // swap nums[i] with nums[left]
+                int temp = nums[i];
+                nums[i] = nums[left];
+                nums[left] = temp;
+                left++;
+            }
+        }
+        return nums;
+    }
+
+    // Utility to print array
+    private static void printArray(int[] arr) {
+        System.out.print("[");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if (i < arr.length - 1) System.out.print(", ");
+        }
+        System.out.println("]");
+    }
+
+    public static void main(String[] args) {
+        int[] a1 = {3, 1, 2, 4};
+        sortArrayByParity(a1);
+        System.out.print("Result 1: ");
+        printArray(a1); // e.g., [2, 4, 3, 1] or any parity-separated arrangement
+
+        int[] a2 = {0};
+        sortArrayByParity(a2);
+        System.out.print("Result 2: ");
+        printArray(a2); // [0]
+
+        int[] a3 = {1, 2, 3, 4, 5, 6};
+        sortArrayByParity(a3);
+        System.out.print("Result 3: ");
+        printArray(a3); // parity-separated
+    }
+}
