@@ -5,10 +5,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0055-jump-game](https://github.com/Pugalhendi/leetcode/tree/master/0055-jump-game) |
+| [0322-coin-change](https://github.com/Pugalhendi/leetcode/tree/master/0322-coin-change) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [0055-jump-game](https://github.com/Pugalhendi/leetcode/tree/master/0055-jump-game) |
+| [0322-coin-change](https://github.com/Pugalhendi/leetcode/tree/master/0322-coin-change) |
 ## Greedy
 |  |
 | ------- |
@@ -21,6 +23,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/Pugalhendi/leetcode/tree/master/0207-course-schedule) |
+| [0322-coin-change](https://github.com/Pugalhendi/leetcode/tree/master/0322-coin-change) |
 ## Graph Theory
 |  |
 | ------- |
