@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0055-jump-game](https://github.com/Pugalhendi/leetcode/tree/master/0055-jump-game) |
+| [0088-merge-sorted-array](https://github.com/Pugalhendi/leetcode/tree/master/0088-merge-sorted-array) |
 | [0322-coin-change](https://github.com/Pugalhendi/leetcode/tree/master/0322-coin-change) |
 ## Dynamic Programming
 |  |
@@ -32,4 +33,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/Pugalhendi/leetcode/tree/master/0207-course-schedule) |
+## Two Pointers
+|  |
+| ------- |
+| [0088-merge-sorted-array](https://github.com/Pugalhendi/leetcode/tree/master/0088-merge-sorted-array) |
+## Sorting
+|  |
+| ------- |
+| [0088-merge-sorted-array](https://github.com/Pugalhendi/leetcode/tree/master/0088-merge-sorted-array) |
 <!---LeetCode Topics End-->
