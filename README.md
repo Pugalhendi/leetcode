@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/Pugalhendi/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0055-jump-game](https://github.com/Pugalhendi/leetcode/tree/master/0055-jump-game) |
 | [0322-coin-change](https://github.com/Pugalhendi/leetcode/tree/master/0322-coin-change) |
 ## Greedy
@@ -36,9 +37,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/Pugalhendi/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0088-merge-sorted-array](https://github.com/Pugalhendi/leetcode/tree/master/0088-merge-sorted-array) |
 ## Sorting
 |  |
 | ------- |
 | [0088-merge-sorted-array](https://github.com/Pugalhendi/leetcode/tree/master/0088-merge-sorted-array) |
+## String
+|  |
+| ------- |
+| [0005-longest-palindromic-substring](https://github.com/Pugalhendi/leetcode/tree/master/0005-longest-palindromic-substring) |
 <!---LeetCode Topics End-->
